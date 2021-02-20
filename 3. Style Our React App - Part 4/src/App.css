@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+/* App */
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.Sidebar {
+  width: 300px;
+  min-width: 210px;
+  height: 100%;
+}
+
+/* Main */
+.Main {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* User */
+.User {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+.User .logo img {
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.User .info p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.User .info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
