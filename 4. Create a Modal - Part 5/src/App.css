@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+/* App */
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.Sidebar {
+  width: 300px;
+  min-width: 210px;
+  height: 100%;
+}
+
+/* Main */
+.Main {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* User */
+.User {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+.User .logo img {
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.User .info p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.User .info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Modal */
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+.Modal .container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background: white;
+}
+/* AddNewTodo */
+.AddNewTodo {
+  border-bottom: 1px solid #ebebeb;
+}
+.AddNewTodo .btn {
+  padding: 1rem;
+  width: 100%;
+  height: 70px;
+}
+.AddNewTodo .btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  background-color: #0080ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.AddNewTodo .btn button:hover {
+  filter: brightness(1.1);
+  transition: all 300ms ease;
+}
