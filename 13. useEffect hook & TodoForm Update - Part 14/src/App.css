@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+/* App */
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.Sidebar {
+  width: 300px;
+  min-width: 210px;
+  height: 100%;
+}
+
+/* Main */
+.Main {
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* User */
+.User {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid #ebebeb;
+}
+
+.User .logo img {
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.User .info p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.User .info a {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Modal */
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+.Modal .container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+/* AddNewTodo */
+.AddNewTodo {
+  border-bottom: 1px solid #ebebeb;
+}
+.AddNewTodo .btn {
+  padding: 1rem;
+  width: 100%;
+  height: 70px;
+}
+.AddNewTodo .btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  background-color: #0080ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.AddNewTodo .btn button:hover {
+  filter: brightness(1.1);
+  transition: all 300ms ease;
+}
+/* AddNewTodo form */
+.TodoForm {
+  padding: 1rem 1rem calc(1rem + 40px) 1rem;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+}
+.TodoForm .text input {
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+}
+.TodoForm .text input:focus {
+  outline: none;
+  border-bottom: 1px solid #0080ff;
+}
+.TodoForm .remind {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.TodoForm p {
+  margin-left: 10px;
+}
+.TodoForm .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.TodoForm .pick-day {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.TodoForm .pick-time {
+  padding: 1.5rem;
+}
+.TodoForm .pick-project {
+  padding: 0.5rem;
+}
+.TodoForm .pick-project .projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 0 1rem;
+}
+.TodoForm .pick-project .projects .project {
+  border: 1px solid #0080ff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.TodoForm .pick-project .projects .active {
+  background: #0080ff;
+  color: white;
+}
+.TodoForm .cancel {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+.TodoForm .confirm {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.TodoForm .confirm button {
+  width: 100%;
+  height: 40px;
+  background: #0080ff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+}
+/* Calendar */
+.Calendar {
+  padding: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.Calendar .header {
+  display: flex;
+  align-items: center;
+}
+.Calendar .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.Calendar .header .title p {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.Calendar .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Calendar .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: all 300ms ease-in-out;
+}
+.Calendar .items {
+  padding: 0.5rem;
+}
+.Calendar .items .item {
+  padding: 0.25rem;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Projects */
+.Projects {
+  padding: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.Projects .header {
+  display: flex;
+  align-items: center;
+}
+.Projects .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.Projects .header .title p {
+  margin-left: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.Projects .header .btns {
+  display: flex;
+  align-items: center;
+}
+.Projects .header .btns span.edit {
+  margin-right: 5px;
+}
+.Projects .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Projects .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: all 300ms ease-in-out;
+}
+.Projects .items {
+  padding: 0.5rem;
+}
+/* Project */
+.Project {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 5px;
+  font-size: 1rem;
+}
+.Project .name {
+  cursor: pointer;
+  word-break: break-all;
+}
+.Project .btns {
+  display: flex;
+  align-items: center;
+}
+.Project .btns .total-todos {
+  position: absolute;
+  right: 0;
+  background: #ebebeb;
+  width: 25px;
+  height: 25px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.Project .btns .edit-delete {
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.Project .btns .edit-delete span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 300ms ease-in-out;
+}
+.Project .btns .edit-delete span.edit:hover {
+  background: #acffac;
+}
+.Project .btns .edit-delete span.delete:hover {
+  background: #ffacac;
+}
+
+/* AddNewProject */
+.AddNewProject .add-button span {
+  margin-right: 5px;
+}
+/* ProjectForm */
+.ProjectForm {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 40px;
+}
+.ProjectForm input {
+  width: 100%;
+  height: 40px;
+  margin: 15px 0;
+  border: none;
+  font-size: 1.2rem;
+}
+.ProjectForm input:focus {
+  outline: none;
+  border-bottom: 1px solid #0080ff;
+}
+.ProjectForm button {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 50%;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 300ms ease-in-out;
+}
+.ProjectForm button.cancel {
+  left: 0;
+  background-color: #bebebe;
+}
+.ProjectForm button.confirm {
+  right: 0;
+  background-color: #0080ff;
+}
+.ProjectForm button:hover {
+  filter: brightness(1.1);
+}
+
+/* Todos */
+.Todos {
+  width: 450px;
+  height: 80%;
+  background-color: white;
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.Todos .selected-project {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+.Todos .todos {
+  overflow-y: auto;
+}
+/* Todo */
+.Todo {
+  padding: 0.5rem 1rem;
+}
+.Todo .todo-container {
+  display: flex;
+  align-items: center;
+}
+.Todo .todo-container span {
+  cursor: pointer;
+}
+.Todo .todo-container .text {
+  position: relative;
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.Todo .todo-container .text span {
+  font-size: 0.8rem;
+  color: #bebebe;
+}
+.Todo .todo-container .text .line {
+  height: 1px;
+  background: #bebebe;
+  position: absolute;
+  top: 25%;
+  width: 0;
+  transition: width 250ms ease-in-out;
+}
+.Todo .todo-container .text .line-through {
+  width: 100%;
+}
+.Todo .todo-container .add-to-next-day {
+  margin-right: 10px;
+}
+/* EditTodo */
+.EditTodo {
+  position: absolute;
+  bottom: 40px;
+  left: calc(40px + 450px + 40px);
+
+  background-color: white;
+
+  height: 80%;
+  width: 450px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+}
+.EditTodo .header {
+  margin: 1rem 0.5rem;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
