@@ -37,10 +37,7 @@ function Todo({todo}){
                         </span>
                     }
                 </div>
-                <div className="delete-todo" onClick={ () => {
-                    firebase
-                        .firestore().collection('todos').doc(todo.id).delete()
-                }}>
+                <div className="delete-todo">
                     {
                         (hover || todo.checked) &&
                         <span>
