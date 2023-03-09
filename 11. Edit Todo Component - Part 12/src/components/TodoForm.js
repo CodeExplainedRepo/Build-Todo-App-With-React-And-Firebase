@@ -61,10 +61,10 @@ function TodoForm({
                     </div>
                     <div className="projects">
                         {
-                            projects.map( project => 
+                            projects.map( project =>
                                 <div className="project" key={project.id}>
                                     {project.name}
-                                </div>    
+                                </div>
                             )
                         }
                     </div>
